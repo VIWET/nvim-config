@@ -1,4 +1,3 @@
-require('lsp/autocmd')
 local lsp_flags = require('lsp/flags')
 local on_attach = require('lsp/on_attach')
 local api = vim.api

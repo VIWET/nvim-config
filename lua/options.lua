@@ -22,6 +22,4 @@ opt.backspace='indent,eol,start'
 opt.incsearch = true
 opt.hlsearch = false
 
-opt.updatetime = 300
-
 cmd('colorscheme xcodedarkhc')
