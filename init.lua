@@ -1,5 +1,6 @@
 require('options')
 require('autocmd')
+require('plugin')
 require('plugins')
 require('global')
 require('lsp')
