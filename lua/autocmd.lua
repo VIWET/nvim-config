@@ -7,7 +7,7 @@ function buf_config()
     local filetype = api.nvim_buf_get_option(buffer, 'filetype')
 
     if filetype == 'go' then
-        opt.expandtab = true
+        opt.expandtab = false
         opt.tabstop = 4
         opt.shiftwidth = 4
         opt.tabstop = 4

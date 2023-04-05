@@ -3,6 +3,14 @@ local map = vim.keymap
 
 local opts = { noremap=true, silent=true } 
 
+vim.diagnostic.config({
+    virtual_text = false,
+    signs = false,
+    underline = true,
+    update_in_insert = true,
+    severity_sort = false,
+})
+
 map.set('n', '<space>e', vim.diagnostic.open_float, opts)
 map.set('n', '[d', vim.diagnostic.goto_prev, opts)
 map.set('n', ']d', vim.diagnostic.goto_next, opts)
@@ -28,7 +36,7 @@ local on_attach = function(client, bufnr)
   map.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
   map.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
   map.set('n', 'gr', vim.lsp.buf.references, bufopts)
-  map.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
+  map.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 end
 
 return on_attach

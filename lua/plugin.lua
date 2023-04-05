@@ -4,9 +4,15 @@ return require('packer').startup(
         use 'neovim/nvim-lspconfig'
         use 'tomlion/vim-solidity'
 
-        use  {
+        use {
             'nvim-treesitter/nvim-treesitter',
             run = ':TSUpdate'
         }
+		use {
+			'kdheepak/monochrome.nvim'
+			-- config = function()
+			-- 	vim.cmd 'colorscheme monochrome'
+			-- end
+		}
     end
 )

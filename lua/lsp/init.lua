@@ -7,7 +7,7 @@ require('lspconfig')['gopls'].setup{
 	flags = lsp_flags,
     settings = {
         gopls = {
-            analyses = {
+          analyses = {
                 nilness = true,
                 unusedparams = true,
                 unusedwrite = true,
